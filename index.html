@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Visa Decision Support System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <img src="images/logo.png" alt="SV-DSS Logo">
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+
+    </header>
+
+    <section class="hero-section">
+
+        <div class="hero-overlay">
+
+            <div class="hero-content">
+
+                <h1>
+                    Plan Your Study Abroad Journey Smartly
+                </h1>
+
+                <p>
+                    A modern student visa decision support system that helps
+                    students evaluate eligibility, estimate costs, manage
+                    documents, and prepare international applications.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="register.html">
+                        <button>Get Started</button>
+                    </a>
+
+                    <a href="login.html">
+                        <button class="secondary-btn">Login</button>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="features-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Why Choose SV-DSS?
+        </h2>
+
+        <p class="features-subtitle">
+            A smart platform designed to simplify your international
+            study journey using modern analytics and decision support tools.
+        </p>
+
+        <div class="dashboard-grid">
+
+            <div class="dashboard-card">
+
+                <div class="feature-icon">
+                    🎯
+                </div>
+
+                <h3>Smart Eligibility</h3>
+
+                <p>
+                    Analyze your GPA, IELTS score, and budget
+                    to identify suitable countries and universities.
+                </p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <div class="feature-icon">
+                    📄
+                </div>
+
+                <h3>Document Management</h3>
+
+                <p>
+                    Upload and organize your passport,
+                    transcripts, bank statements, and certificates.
+                </p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <div class="feature-icon">
+                    📊
+                </div>
+
+                <h3>Visa Readiness Analytics</h3>
+
+                <p>
+                    Receive intelligent readiness scores and
+                    application strength evaluations instantly.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <main class="container">
+
+        <section>
+
+            <div class="stats-grid">
+
+                <div class="stats-card">
+                    <h2>25+</h2>
+                    <p>Supported Countries</p>
+                </div>
+
+                <div class="stats-card">
+                    <h2>100+</h2>
+                    <p>University Options</p>
+                </div>
+
+                <div class="stats-card">
+                    <h2>90%</h2>
+                    <p>Decision Accuracy</p>
+                </div>
+
+                <div class="stats-card">
+                    <h2>24/7</h2>
+                    <p>Student Access</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2 class="section-title">
+                Core Features
+            </h2>
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-card">
+                    <h3>Eligibility Analysis</h3>
+
+                    <p>
+                        Analyze student GPA, IELTS score, and budget
+                        dynamically to determine study visa eligibility.
+                    </p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Document Management</h3>
+
+                    <p>
+                        Upload and manage passports, bank statements,
+                        transcripts, and certificates securely.
+                    </p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Readiness Score</h3>
+
+                    <p>
+                        Evaluate application readiness and approval
+                        probability through dynamic scoring.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2 class="section-title">
+                Popular Study Destinations
+            </h2>
+
+            <div class="country-grid">
+
+                <div class="country-card">
+
+                    <img src="images/canada.jpg" alt="Canada">
+
+                    <div class="country-info">
+
+                        <h3>Canada</h3>
+
+                        <p>
+                            High visa success rate and excellent
+                            international education opportunities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="country-card">
+
+                    <img src="images/uk.jpg" alt="UK">
+
+                    <div class="country-info">
+
+                        <h3>United Kingdom</h3>
+
+                        <p>
+                            Globally recognized universities and
+                            strong graduate pathways.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="country-card">
+
+                    <img src="images/australia.jpg" alt="Australia">
+
+                    <div class="country-info">
+
+                        <h3>Australia</h3>
+
+                        <p>
+                            Modern education system with excellent
+                            post-study work opportunities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+   <!-- CHATBOT BUTTON -->
+
+<div class="chatbot-button" onclick="toggleChatbot()">
+    💬
+</div>
+
+<!-- CHATBOT WINDOW -->
+
+<div class="chatbot-container" id="chatbotContainer">
+
+    <div class="chatbot-header">
+
+        <div>
+            AI Visa Assistant
+        </div>
+
+        <button onclick="toggleChatbot()">
+            ✖
+        </button>
+
+    </div>
+
+    <div class="chatbot-body" id="chatbotBody">
+
+        <div class="bot-message">
+            Hello! Ask me anything about student visas.
+        </div>
+
+        <div class="bot-message">
+            Suggested Questions:
+            <br><br>
+            • What IELTS is needed for Canada?
+            <br>
+            • What documents are required?
+            <br>
+            • Which country is best for study?
+            <br>
+            • Can I work while studying?
+        </div>
+
+    </div>
+
+    <div class="chatbot-input-area">
+
+        <input
+            type="text"
+            id="chatInput"
+            placeholder="Ask visa related question..."
+        >
+
+        <button onclick="sendMessage()">
+            Send
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+function toggleChatbot(){
+
+    const chatbot =
+    document.getElementById('chatbotContainer');
+
+    chatbot.classList.toggle('show-chatbot');
+}
+
+async function sendMessage(){
+
+    const input =
+    document.getElementById('chatInput');
+
+    const body =
+    document.getElementById('chatbotBody');
+
+    const message = input.value.trim();
+
+    if(message === '') return;
+
+    body.innerHTML += `
+
+        <div class="user-message">
+            ${message}
+        </div>
+
+    `;
+
+    input.value = '';
+
+    const response = await fetch('php/chatbot.php', {
+
+        method:'POST',
+
+        headers:{
+            'Content-Type':'application/json'
+        },
+
+        body: JSON.stringify({
+            message:message
+        })
+
+    });
+
+    const data = await response.json();
+
+    body.innerHTML += `
+
+        <div class="bot-message">
+            ${data.reply}
+        </div>
+
+    `;
+
+    body.scrollTop = body.scrollHeight;
+}
+
+</script>
+
+
+</body>
+</html>

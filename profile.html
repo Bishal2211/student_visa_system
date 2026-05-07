@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Profile</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar">
+
+        <div class="logo">
+            SV-DSS
+        </div>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="index.html">Home</a>
+        </nav>
+
+    </div>
+
+    <div class="container">
+
+        <h1 class="section-title">
+            Student Academic Profile
+        </h1>
+
+        <p style="
+            text-align:center;
+            max-width:800px;
+            margin:auto;
+            color:#64748b;
+            margin-bottom:50px;
+        ">
+            Provide your academic and financial information to
+            generate dynamic visa eligibility analysis and readiness score.
+        </p>
+
+        <div class="auth-container" style="min-height:auto; padding-top:0;">
+
+            <div class="auth-card" style="max-width:800px;">
+
+                <form action="php/save_profile.php" method="POST">
+
+                    <div class="form-group">
+
+                        <label>SSC / HSC GPA</label>
+
+                        <input
+                            type="number"
+                            step="0.01"
+                            name="gpa"
+                            placeholder="Enter GPA"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>IELTS Score</label>
+
+                        <input
+                            type="number"
+                            step="0.5"
+                            name="ielts"
+                            placeholder="Enter IELTS score"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Available Budget (BDT)</label>
+
+                        <input
+                            type="number"
+                            name="budget"
+                            placeholder="Enter your study budget"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Preferred Country</label>
+
+                        <select name="country" required>
+
+                            <option value="">
+                                Select Country
+                            </option>
+
+                            <option value="Canada">
+                                Canada
+                            </option>
+
+                            <option value="United Kingdom">
+                                United Kingdom
+                            </option>
+
+                            <option value="Australia">
+                                Australia
+                            </option>
+
+                            <option value="USA">
+                                USA
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <button type="submit">
+                        Save Academic Profile
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
