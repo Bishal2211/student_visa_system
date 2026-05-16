@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2026 at 10:47 AM
+-- Generation Time: May 16, 2026 at 08:52 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `student_visa_system`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admins`
+--
+
+CREATE TABLE `admins` (
+  `id` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`id`, `username`, `password`) VALUES
+(1, 'admin', 'SVdssAdmin2026');
 
 -- --------------------------------------------------------
 
@@ -70,7 +89,7 @@ CREATE TABLE `student_profiles` (
 --
 
 INSERT INTO `student_profiles` (`profile_id`, `user_id`, `gpa`, `ielts_score`, `budget`, `preferred_country`) VALUES
-(1, 1, 3.80, 7.0, 15000000.00, 'Australia'),
+(1, 1, 3.50, 6.5, 1499999.00, 'Australia'),
 (2, 2, 2.00, 6.0, 15000.00, 'usa');
 
 -- --------------------------------------------------------
@@ -93,7 +112,7 @@ CREATE TABLE `universities` (
 --
 
 INSERT INTO `universities` (`university_id`, `country_id`, `university_name`, `required_gpa`, `required_ielts`, `tuition_fee`) VALUES
-(1, 1, 'University of Toronto', 3.50, 7.0, 2500000.00),
+(1, 1, 'University of Toronto', 3.50, 6.5, 2500000.00),
 (2, 1, 'York University', 3.00, 6.5, 2000000.00),
 (3, 2, 'University of London', 3.00, 6.5, 1800000.00),
 (4, 2, 'University of Manchester', 3.20, 6.5, 2000000.00),
@@ -127,6 +146,12 @@ INSERT INTO `users` (`user_id`, `full_name`, `email`, `password`) VALUES
 --
 
 --
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `countries`
 --
 ALTER TABLE `countries`
@@ -157,6 +182,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `countries`
 --
 ALTER TABLE `countries`
@@ -172,7 +203,7 @@ ALTER TABLE `student_profiles`
 -- AUTO_INCREMENT for table `universities`
 --
 ALTER TABLE `universities`
-  MODIFY `university_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `university_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
